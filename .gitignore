@@ -2,3 +2,6 @@
 .vs
 .vscode
 .idea
+
+storage
+!storage/.gitkeep
