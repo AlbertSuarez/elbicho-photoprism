@@ -41,10 +41,15 @@ services:
       PHOTOPRISM_SITE_DESCRIPTION: ""
       PHOTOPRISM_SITE_AUTHOR: ""
       HOME: "/photoprism"
+      NVIDIA_DRIVER_CAPABILITIES: "all"
+      NVIDIA_VISIBLE_DEVICES: "all"
+      PHOTOPRISM_FFMPEG_BUFFERS: "64"
+      PHOTOPRISM_FFMPEG_ENCODER: "h264_nvenc"
     working_dir: "/photoprism"
     volumes:
       - "/mnt/photoprism:/photoprism/originals"
       - "./storage:/photoprism/storage"
+    runtime: nvidia
 
   mariadb:
     container_name: photoprism_db
