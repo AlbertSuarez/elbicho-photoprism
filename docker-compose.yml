@@ -43,8 +43,7 @@ services:
       HOME: "/photoprism"
       NVIDIA_DRIVER_CAPABILITIES: "all"
       NVIDIA_VISIBLE_DEVICES: "all"
-      PHOTOPRISM_FFMPEG_BUFFERS: "64"
-      PHOTOPRISM_FFMPEG_ENCODER: "h264_nvenc"
+      PHOTOPRISM_FFMPEG_ENCODER: "nvidia"
     working_dir: "/photoprism"
     volumes:
       - "/mnt/photoprism:/photoprism/originals"
